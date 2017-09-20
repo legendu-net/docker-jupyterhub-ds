@@ -9,7 +9,10 @@ JupyterHub for Data Science.
 ## Usage 
 
 ```
-docker run -d -p 8888:8888 -p 8787:8787 \ 
+docker run -d -p 8000:8000 \ 
+    -e DOCKER_USER=`id -un` \
+    -e DOCKER_USER_ID=`id -u` \
+    -e DOCKER_PASSWORD=`id -un` \
     -v /wwwroot:/jupyter \
     -v $HOME:/`id -un` \
     dclong/jupyterhub-ds
