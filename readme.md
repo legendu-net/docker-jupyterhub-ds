@@ -9,7 +9,7 @@ JupyterHub for Data Science.
 ## Usage 
 
 ```
-docker run -d -p 8000:8000 \ 
+docker run -d -p 8000:8000 \
     -e DOCKER_USER=`id -un` \
     -e DOCKER_USER_ID=`id -u` \
     -e DOCKER_PASSWORD=`id -un` \
