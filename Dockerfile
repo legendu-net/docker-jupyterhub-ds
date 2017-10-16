@@ -5,6 +5,7 @@ RUN npm install -g configurable-http-proxy \
 
 ADD jupyterhub_config.py /etc/jupyterhub/
 ADD script.sh /
+ADD inotify.sh /
 
 EXPOSE 8000
 
