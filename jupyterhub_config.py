@@ -615,7 +615,7 @@ c.Spawner.notebook_dir = '/jupyter'
 #  Admin access should be treated the same way root access is.
 #  
 #  Defaults to an empty set, in which case no user has admin access.
-c.Authenticator.admin_users = {'chdu', 'dclong'}
+# c.Authenticator.admin_users = set()
 
 ## Automatically begin the login process
 #  
@@ -700,7 +700,7 @@ c.Authenticator.admin_users = {'chdu', 'dclong'}
 #  already.
 #  
 #  Supports Linux and BSD variants only.
-c.LocalAuthenticator.create_system_users = True
+# c.LocalAuthenticator.create_system_users = False
 
 ## Whitelist all users from this UNIX group.
 #  
@@ -741,3 +741,4 @@ c.LocalAuthenticator.create_system_users = True
 
 ## The number of threads to allocate for encryption
 #c.CryptKeeper.n_threads = 8
+
