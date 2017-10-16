@@ -18,3 +18,15 @@ docker run -d -p 8000:8000 \
     -v $HOME:/`id -un` \
     dclong/jupyterhub-ds
 ```
+
+```
+docker run -d -p 8000:8000 \
+    -e DOCKER_USER=`id -un` \
+    -e DOCKER_USER_ID=`id -u` \
+    -e DOCKER_PASSWORD=`id -un` \
+    -e DOCKER_GROUP_ID=`getent group nogroup | cut -d: -f3` \
+    -v /wwwroot:/jupyter \
+    -v /wwwroot:/wwwroot \
+    -v $HOME:/`id -un` \
+    dclong/jupyterhub-ds
+```
