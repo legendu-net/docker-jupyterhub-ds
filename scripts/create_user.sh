@@ -38,3 +38,7 @@ function create_user() {
     echo $user:$password | chpasswd
     gpasswd -a $user sudo
 }
+
+if [[ "$0" == ${BASH_SOURCE[0]} ]]; then
+    create_user $@
+fi
