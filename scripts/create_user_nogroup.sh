@@ -24,7 +24,7 @@ function create_user_nogroup() {
     local user_id=$2
     local group=nogroup
     local password=${4:-$user}
-    /scripts/create_user_group $user $user_id $group $password
+    /scripts/create_user_group.sh $user $user_id $group $password
 }
 
 if [[ "$0" == ${BASH_SOURCE[0]} ]]; then
