@@ -27,7 +27,7 @@ function create_user_group() {
     local group=$3
     local group_id=$(getent group $group | cut -d: -f3)
     local password=${4:-$user}
-    /scripts/create_user $user $user_id $password $group $group_id
+    /scripts/create_user.sh $user $user_id $password $group $group_id
 }
 
 if [[ "$0" == ${BASH_SOURCE[0]} ]]; then
