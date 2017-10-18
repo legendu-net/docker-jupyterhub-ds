@@ -13,7 +13,7 @@ EOF
 
 function create_user_nogroup() {
     if [[ $1 == "-h" ]]; then
-        create_user_group.usage
+        create_user_nogroup.usage
         return 0
     fi
     if [[ $# < 2 || $# > 3 ]]; then
