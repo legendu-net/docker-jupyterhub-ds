@@ -14,6 +14,7 @@ docker run -d -p 8000:8000 \
     -e DOCKER_USER_ID=`id -u` \
     -e DOCKER_PASSWORD=`id -un` \
     -e DOCKER_GROUP_ID=`getent group nogroup | cut -d: -f3` \
+    -e DOCKER_ADMIN_USER=`id -un` \
     -v /wwwroot:/jupyter \
     -v $HOME:/`id -un` \
     dclong/jupyterhub-ds
@@ -25,6 +26,7 @@ docker run -d -p 8000:8000 \
     -e DOCKER_USER_ID=`id -u` \
     -e DOCKER_PASSWORD=`id -un` \
     -e DOCKER_GROUP_ID=`getent group nogroup | cut -d: -f3` \
+    -e DOCKER_ADMIN_USER=`id -un` \
     -v /wwwroot:/jupyter \
     -v /wwwroot:/wwwroot \
     -v $HOME:/`id -un` \
