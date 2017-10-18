@@ -42,7 +42,7 @@
 #c.JupyterHub.admin_access = False
 
 ## DEPRECATED since version 0.7.2, use Authenticator.admin_users instead.
-#c.JupyterHub.admin_users = set()
+c.JupyterHub.admin_users = set()
 
 ## Allow named single-user servers per user
 #c.JupyterHub.allow_named_servers = False
