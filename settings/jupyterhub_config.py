@@ -39,7 +39,7 @@
 ## Grant admin users permission to access single-user servers.
 #  
 #  Users should be properly informed if this is enabled.
-#c.JupyterHub.admin_access = False
+c.JupyterHub.admin_access = True
 
 ## DEPRECATED since version 0.7.2, use Authenticator.admin_users instead.
 c.JupyterHub.admin_users = set()
