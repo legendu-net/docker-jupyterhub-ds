@@ -41,9 +41,6 @@
 #  Users should be properly informed if this is enabled.
 c.JupyterHub.admin_access = True
 
-## DEPRECATED since version 0.7.2, use Authenticator.admin_users instead.
-c.JupyterHub.admin_users = set()
-
 ## Allow named single-user servers per user
 #c.JupyterHub.allow_named_servers = False
 
@@ -479,7 +476,7 @@ c.Spawner.default_url = '/lab'
 #  to allocate this much memory - only that it can not allocate more than this.
 #  
 #  This needs to be supported by your spawner for it to work.
-#c.Spawner.mem_limit = None
+c.Spawner.mem_limit = '8G'
 
 ## Path to the notebook directory for the single-user server.
 #  
