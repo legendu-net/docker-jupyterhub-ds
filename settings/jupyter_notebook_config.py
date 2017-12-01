@@ -1,2 +1,2 @@
-# import os
-# os.umask(0o002) 
+import os
+os.umask(0o002) 
