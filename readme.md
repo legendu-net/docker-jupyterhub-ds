@@ -8,7 +8,7 @@ JupyterHub for Data Science.
 
 ## Usage in Linux/Unix
 
-### Pull the Docker Image
+### Get the Docker Image
 ```
 docker pull dclong/jupyterhub-ds
 ```
