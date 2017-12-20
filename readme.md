@@ -23,6 +23,7 @@ docker run -d \
     -e DOCKER_PASSWORD=`id -un` \
     -e DOCKER_GROUP_ID=`getent group nogroup | cut -d: -f3` \
     -e DOCKER_ADMIN_USER=`id -un` \
+    -e USER_MEM_LIMIT=4G \
     -v /wwwroot:/jupyter \
     -v /home:/home_host \
     dclong/jupyterhub-ds
@@ -37,6 +38,7 @@ docker run -d \
     -e DOCKER_PASSWORD=`id -un` \
     -e DOCKER_GROUP_ID=`getent group nogroup | cut -d: -f3` \
     -e DOCKER_ADMIN_USER=`id -un` \
+    -e USER_MEM_LIMIT=4G \
     -v /wwwroot:/jupyter \
     -v /wwwroot:/wwwroot \
     -v /home:/home_host \
