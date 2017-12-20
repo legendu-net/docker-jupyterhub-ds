@@ -270,7 +270,7 @@ c.JupyterHub.port = 8000
 ## The class to use for spawning single-user servers.
 #  
 #  Should be a subclass of Spawner.
-#c.JupyterHub.spawner_class = 'jupyterhub.spawner.LocalProcessSpawner'
+c.JupyterHub.spawner_class = 'systemdspawner.SystemdSpawner'
 
 ## Path to SSL certificate file for the public facing interface of the proxy
 #  
