@@ -8,6 +8,12 @@ JupyterHub for Data Science.
 
 ## Usage in Linux/Unix
 
+### Get the Docker Image
+```
+docker pull dclong/jupyterhub-ds
+```
+
+### Run a Container
 ```
 docker run -d \
     --log-opt max-size=50m \
