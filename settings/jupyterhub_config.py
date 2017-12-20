@@ -270,7 +270,7 @@ c.JupyterHub.port = 8000
 ## The class to use for spawning single-user servers.
 #  
 #  Should be a subclass of Spawner.
-c.JupyterHub.spawner_class = 'systemdspawner.SystemdSpawner'
+# c.JupyterHub.spawner_class = 'systemdspawner.SystemdSpawner'
 
 ## Path to SSL certificate file for the public facing interface of the proxy
 #  
@@ -477,7 +477,7 @@ c.Spawner.default_url = '/lab'
 #  
 #  This needs to be supported by your spawner for it to work.
 # c.Spawner.mem_limit = '6G'
-c.SystemdSpawner.mem_limit = '6G'
+# c.SystemdSpawner.mem_limit = '6G'
 
 ## Path to the notebook directory for the single-user server.
 #  
