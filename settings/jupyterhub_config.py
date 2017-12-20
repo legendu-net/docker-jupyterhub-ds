@@ -476,7 +476,8 @@ c.Spawner.default_url = '/lab'
 #  to allocate this much memory - only that it can not allocate more than this.
 #  
 #  This needs to be supported by your spawner for it to work.
-c.Spawner.mem_limit = '6G'
+# c.Spawner.mem_limit = '6G'
+c.SystemdSpawner.mem_limit = '6G'
 
 ## Path to the notebook directory for the single-user server.
 #  
