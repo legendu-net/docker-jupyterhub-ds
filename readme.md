@@ -30,3 +30,18 @@ docker run -d \
     -v /home:/home_host \
     dclong/jupyterhub-ds
 ```
+```
+docker run -d \
+    --log-opt max-size=50m \
+    -p 8000:8000 \
+    -e DOCKER_USER=`id -un` \
+    -e DOCKER_USER_ID=`id -u` \
+    -e DOCKER_PASSWORD=`id -un` \
+    -e DOCKER_GROUP_ID=`id -g` \
+    -e DOCKER_ADMIN_USER=`id -un` \
+    -e USER_MEM_LIMIT=4G \
+    -v /wwwroot:/jupyter \
+    -v /wwwroot:/wwwroot \
+    -v /home:/home_host \
+    registry.docker-cn.com/dclong/jupyterhub-ds
+```
