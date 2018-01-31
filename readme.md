@@ -41,7 +41,5 @@ docker run -d \
     -e DOCKER_ADMIN_USER=`id -un` \
     -e USER_MEM_LIMIT=4G \
     -v `pwd`:/jupyter \
-    -v `pwd`:/wwwroot \
-    -v /home:/home_host \
     registry.docker-cn.com/dclong/jupyterhub-ds
 ```
