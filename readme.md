@@ -141,6 +141,23 @@ sudo /scripts/create_user_nogroup.sh dclong 2000
 Since we didn't specify a password for the user, 
 the default password (same as the user name) is used. 
 
+## Known Issues
+
+1. Lack of resource limit management. 
+    The argument `USER_MEM_LIMIT` is not in effect due to the default Spawner used. 
+    This is not big issue if you have a few light users. 
+    However, if there are many heavy users (especially Spark notebook users) you server can run out of memory. 
+    It's good practice to have users close unused notebooks to save memory.  
+2. The subprocess managment issue. 
+    This is not an issue at in most use cases. 
+    This Docker image launch service using a shell script 
+    so there won't be orphan subprocesses 
+    when the process of the Docker container is get killed.
+    However, launching by shell script is not the best way for managing processes.
+    I might switch to the [Supervisor](https://github.com/Supervisor/supervisor) for process management 
+    or use the base image of [pushion/ubuntu](https://github.com/phusion/baseimage-docker) in future. 
+
+
 ## About the Author
 
 [Personal Blog](http://www.legendu.net)   |   [GitHub](https://github.com/dclong)   |   [Bitbucket](https://bitbucket.org/dclong/)   |   [LinkedIn](http://www.linkedin.com/in/ben-chuanlong-du-1239b221/)
