@@ -6,16 +6,16 @@ if you want to do some data science related work in JupyterLab/Jupyter Notebook.
 
 ## Detailed Information 
 
-OS: the latest Ubuntu LTS 
-Desktop Environment: None
-Remote Desktop: None
+OS: the latest Ubuntu LTS  
+Desktop Environment: None  
+Remote Desktop: None  
 Kernels:  
-    - Python 3 (with popular packages)
-    - SQL (based on JDBC) via BeakerX
-    - Scala via BeakerX
-    - Apache Spark via Apache Toree
-    - Java, Clojure, Groovy, Kotlin via BeakerX
-    - R (with popular packages)
+    - Python 3 (with popular packages)  
+    - SQL (based on JDBC) via BeakerX  
+    - Scala via BeakerX  
+    - Apache Spark via Apache Toree  
+    - Java, Clojure, Groovy, Kotlin via BeakerX  
+    - R (with popular packages)  
 
 ## Usage in Linux/Unix
 
