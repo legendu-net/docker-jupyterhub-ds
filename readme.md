@@ -28,7 +28,7 @@ sudo apt-get install docker.io
 ```
 If you'd rather install the enterprise edition
 or if you are on other platforms, 
-please refer to the offical Docker doc [Install Docker](Install Docker).
+please refer to the offical Docker doc [Install Docker](https://docs.docker.com/install/).
 
 ### Pull the Docker Image
 ```
