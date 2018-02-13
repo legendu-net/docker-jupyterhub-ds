@@ -108,6 +108,39 @@ and password (by default your user name on the host and might want to change it 
 You can of course change your user password later 
 using the command `passwd` in the container.  
 
+## Add a New User to the JupyterHub Server
+
+By default, 
+any user in the Docker container can visit the JupyterHub server. 
+So if you want to grant access to a new user, 
+just create an account from him in the Docker container. 
+You can of course use the well know commands `useradd`, `adduser`, etc. to achive it. 
+To make things easier for you,
+there are some shell scripts in the directory `/scripts/` to create usres for you.
+
+- `/scripts/create_user.sh`: Create a new user. It's the base script for creating users. 
+- `/scripts/create_user_group.sh`: Create a new user with the given (existing) group.
+- `/scripts/create_user_nogroup.sh`: Create a new user with group name `nogroup`. 
+- `/scripts/create_user_docker.sh`: Create a new user with group name `docker`.
+
+You can use the option `-h` to print help doc for these commands. 
+For example, `/scripts/create_user_nogroup.sh -h` prints the below help doc. 
+```
+Create a new user with the group name "nogroup".
+Syntax: create_user_nogroup user user_id [password]
+Arguments:
+user: user name
+user_id: user id
+password: Optional password of the user. If not provided, then the user name is used as the password.
+```
+Now suppose you want to create a new user `dclong` with user ID `2000` and group name `nogroup`, 
+you can use the following command. 
+```
+/scripts/create_user_nogroup.sh dclong 2000
+```
+Since we didn't specify a password for the user, 
+the default password (same as the user name) is used. 
+
 ## About the Author
 
 [Personal Blog](http://www.legendu.net)   |   [GitHub](https://github.com/dclong)   |   [Bitbucket](https://bitbucket.org/dclong/)   |   [LinkedIn](http://www.linkedin.com/in/ben-chuanlong-du-1239b221/)
