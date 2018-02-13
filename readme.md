@@ -94,6 +94,14 @@ docker run -d \
     -v `pwd`:/jupyter \
     registry.docker-cn.com/dclong/jupyterhub-ds
 ```
+## Use the JupyterHub Server
+
+Open your browser and and visit `your_host_ip:8000` 
+where `your_host_ip` is the URL/ip address of your server. 
+You will be asked for user name (by default your user name on the host)
+and password (by default your user name on the host and might want to change it for security reasons).
+You can of course change your user password later 
+using the command `passwd` in the container.  
 
 ## About the Author
 
