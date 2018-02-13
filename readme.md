@@ -136,7 +136,7 @@ password: Optional password of the user. If not provided, then the user name is 
 Now suppose you want to create a new user `dclong` with user ID `2000` and group name `nogroup`, 
 you can use the following command. 
 ```
-/scripts/create_user_nogroup.sh dclong 2000
+sudo /scripts/create_user_nogroup.sh dclong 2000
 ```
 Since we didn't specify a password for the user, 
 the default password (same as the user name) is used. 
