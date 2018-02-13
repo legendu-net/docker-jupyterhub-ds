@@ -113,7 +113,7 @@ using the command `passwd` in the container.
 By default, 
 any user in the Docker container can visit the JupyterHub server. 
 So if you want to grant access to a new user, 
-just create an account from him in the Docker container. 
+just create an account for him in the Docker container. 
 You can of course use the well know commands `useradd`, `adduser`, etc. to achive it. 
 To make things easier for you,
 there are some shell scripts in the directory `/scripts/` to create usres for you.
