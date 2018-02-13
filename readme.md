@@ -143,7 +143,7 @@ the default password (same as the user name) is used.
 
 ## Known Issues
 
-1. Lack of resource limit management. 
+1. Lack of resource management. 
     The argument `USER_MEM_LIMIT` is not in effect due to the default Spawner used. 
     This is not big issue if you have a few light users. 
     However, if there are many heavy users (especially Spark notebook users) you server can run out of memory. 
