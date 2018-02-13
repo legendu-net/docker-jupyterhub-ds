@@ -1,19 +1,59 @@
 # [dclong/jupyterhub-ds](https://hub.docker.com/r/dclong/jupyterhub-ds/)
 
 JupyterHub for Data Science. 
+This is the recommended Docker image to use 
+if you want to do some data science related work in JupyterLab/Jupyter Notebook.
 
-## About the Author
+## Detailed Information 
 
-[Personal Blog](http://www.legendu.net)   |   [GitHub](https://github.com/dclong)   |   [Bitbucket](https://bitbucket.org/dclong/)   |   [LinkedIn](http://www.linkedin.com/in/ben-chuanlong-du-1239b221/)
+OS: the latest Ubuntu LTS 
+Desktop Environment: None
+Remote Desktop: None
+Kernels:  
+    - Python 3 (with popular packages)
+    - SQL (based on JDBC) via BeakerX
+    - Scala via BeakerX
+    - Apache Spark via Apache Toree
+    - Java, Clojure, Groovy, Kotlin via BeakerX
+    - R (with popular packages)
 
 ## Usage in Linux/Unix
 
-### Get the Docker Image
+### Pull the Docker Image
 ```
 docker pull dclong/jupyterhub-ds
 ```
+For people in mainland of China, 
+please refer to the post 
+[Speedup Docker Pulling and Pushing](http://www.legendu.net/en/blog/speedup-docker-pulling-and-pushing/) 
+on ways to speed up pushing/pulling of Docker images. 
+If you don't bother, 
+then just use the command below. 
+```
+docker pull registry.docker-cn.com/dclong/jupyterhub-ds
+```
 
-### Run a Container
+### Start a Container
+
+- `DOCKER_USER`: The user to be created (dynamically) in the container. 
+    By default, the name of the current user on the host is used. 
+- `DOCKER_USER_ID`: The ID of the user to be created in the container. 
+    By default, the ID of the current user on the host is used. 
+- `DOCKER_PASSWORD`: The password of the user to be created. 
+    By default, it's the same as the user name. 
+    You'd better change it for security reasons. 
+    Of course, users can always change it later using the command `passwd`.
+- `DOCKER_GROUP_ID`: The group of the user to be created. 
+    By default, it's the group ID of the current user on the host.
+- `DOCKER_ADMIN_USER`: The admin of the JupyterLab server. 
+    By default, it's the user to be created in the container. 
+- `USER_MEM_LIMIT`: The memory limit that each user can use. 
+    Note that this optional is not in effect now. 
+    
+The root directory of JupyterLab/Jupyter notebooks is `/jupyter` in the container. 
+You can mount directory on the host to it as you wish. 
+In the illustration command below, 
+I have the directory `/wwwroot` on the host mounted to `/jupyter` in the container. 
 
 ```
 docker run -d \
@@ -43,3 +83,7 @@ docker run -d \
     -v `pwd`:/jupyter \
     registry.docker-cn.com/dclong/jupyterhub-ds
 ```
+
+## About the Author
+
+[Personal Blog](http://www.legendu.net)   |   [GitHub](https://github.com/dclong)   |   [Bitbucket](https://bitbucket.org/dclong/)   |   [LinkedIn](http://www.linkedin.com/in/ben-chuanlong-du-1239b221/)
