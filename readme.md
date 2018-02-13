@@ -19,6 +19,17 @@ Kernels:
 
 ## Usage in Linux/Unix
 
+### Prerequisites
+You must have Docker installed. 
+If you are on Ubuntu, 
+the just use the command below to install the community edition of Docker.
+```
+sudo apt-get install docker.io
+```
+If you'd rather install the enterprise edition
+or if you are on other platforms, 
+please refer to the offical Docker doc [Install Docker](Install Docker).
+
 ### Pull the Docker Image
 ```
 docker pull dclong/jupyterhub-ds
