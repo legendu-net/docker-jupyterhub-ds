@@ -48,7 +48,7 @@ docker pull registry.docker-cn.com/dclong/jupyterhub-ds
 
 Below are some Docker command arguments explained. 
 These are for properly handling file permissions in the Docker container and on the host. 
-Keep the default if you don't know what the best to use. 
+Keep the default if you don't know what are the best to use. 
 `DOCKER_PASSWORD` is probably the only argument you want to and should change. 
 
 - `DOCKER_USER`: The user to be created (dynamically) in the container. 
