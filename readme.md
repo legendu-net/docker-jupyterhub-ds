@@ -15,7 +15,7 @@ Kernels:
     - Scala via BeakerX  
     - Apache Spark via Apache Toree  
     - Java, Clojure, Groovy, Kotlin via BeakerX  
-    - R (with popular packages)  
+    ~~- R (with popular packages)~~
 
 ## Usage in Linux/Unix
 
