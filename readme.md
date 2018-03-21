@@ -97,7 +97,7 @@ docker run -d \
     -e DOCKER_ADMIN_USER=`id -un` \
     -e USER_MEM_LIMIT=4G \
     -v `pwd`:/jupyter \
-    jupyterhub-ds
+    dclong/jupyterhub-ds
 ```
 ```
 docker run -d \
