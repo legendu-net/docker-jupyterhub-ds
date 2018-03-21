@@ -97,6 +97,19 @@ docker run -d \
     -e DOCKER_ADMIN_USER=`id -un` \
     -e USER_MEM_LIMIT=4G \
     -v `pwd`:/jupyter \
+    jupyterhub-ds
+```
+```
+docker run -d \
+    --log-opt max-size=50m \
+    -p 8000:8000 \
+    -e DOCKER_USER=`id -un` \
+    -e DOCKER_USER_ID=`id -u` \
+    -e DOCKER_PASSWORD=`id -un` \
+    -e DOCKER_GROUP_ID=`id -g` \
+    -e DOCKER_ADMIN_USER=`id -un` \
+    -e USER_MEM_LIMIT=4G \
+    -v `pwd`:/jupyter \
     registry.docker-cn.com/dclong/jupyterhub-ds
 ```
 ## Use the JupyterHub Server
