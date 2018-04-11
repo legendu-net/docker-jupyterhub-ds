@@ -11,16 +11,16 @@ Desktop Environment: None
 Remote Desktop: None  
 Kernels:  
     - Python 3 (with popular packages)  
-        - numpy scipy pandas dask \
-        - torch torchvision tensorflow keras h2o \
-        - gensim nltk \
-        - scikit-learn xgboost \
-        - matplotlib seaborn bokeh plotly \ 
-        - tabulate \
-        - JayDeBeApi pymysql pymongo sqlalchemy \
-        - pysocks \
-        - requests[socks] Scrapy beautifulsoup4 wget \
-ansible
+        - numpy scipy pandas dask  
+        - torch torchvision tensorflow keras h2o  
+        - gensim nltk  
+        - scikit-learn xgboost  
+        - matplotlib seaborn bokeh plotly  
+        - tabulate  
+        - JayDeBeApi pymysql pymongo sqlalchemy  
+        - pysocks  
+        - requests[socks] Scrapy beautifulsoup4 wget  
+        - ansible
     - SQL (based on JDBC) via BeakerX  
     - Scala via BeakerX  
     - Apache Spark via Apache Toree  
