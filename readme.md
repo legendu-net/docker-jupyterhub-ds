@@ -11,8 +11,8 @@ Desktop Environment: None
 Remote Desktop: None  
 Kernels:  
     - Python 3 (with popular packages)  
-        - numpy scipy pandas dask  
-        - torch torchvision tensorflow keras h2o  
+        + numpy scipy pandas dask  
+        + torch torchvision tensorflow keras h2o  
         - gensim nltk  
         - scikit-learn xgboost  
         - matplotlib seaborn bokeh plotly  
