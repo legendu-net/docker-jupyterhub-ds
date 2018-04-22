@@ -18,7 +18,7 @@ RUN apt-get update -y \
     && rm -rf /scripts/tdodbc1620.deb \
     && apt-get autoremove \
     && apt-get autoclean 
-RUN pip3 install teradata 
+RUN conda install -c conda-forge teradata 
 ENV ODBCHOME=/opt/teradata/client/ODBC_64 ODBCINI=/opt/teradata/client/ODBC_64/odbc.ini
 RUN echo 'export ODBCHOME=/opt/teradata/client/ODBC_64' >> /etc/profile \
     && echo 'export ODBCINI=/opt/teradata/client/ODBC_64/odbc.ini' >> /etc/profile 
