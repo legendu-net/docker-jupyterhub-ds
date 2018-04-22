@@ -1,12 +1,26 @@
-FROM dclong/jupyterlab-ds
+FROM dclong/jupyterhub-py
 
-RUN npm install -g configurable-http-proxy \
-    && pip3 install jupyterhub jupyterhub-systemdspawner
+RUN apt-get update -y \
+    && apt-get install -y \
+        tmux proxychains \
+        q-text-as-data \
+        bash-completion \
+    && apt-get autoremove \
+    && apt-get autoclean
 
-ADD settings/jupyter_notebook_config.py /etc/jupyter/
-ADD settings/jupyterhub_config.py /etc/jupyterhub/
-ADD scripts /scripts
+# configure proxychains
+COPY settings/proxychains.conf /etc/proxychains.conf
 
-EXPOSE 8000
+# install Teradata ODBC
+COPY scripts/ /scripts/
+RUN apt-get update -y \
+    && apt-get install -y /scripts/tdodbc1620.deb \
+    && rm -rf /scripts/tdodbc1620.deb \
+    && apt-get autoremove \
+    && apt-get autoclean 
+RUN pip3 install teradata 
+ENV ODBCHOME=/opt/teradata/client/ODBC_64 ODBCINI=/opt/teradata/client/ODBC_64/odbc.ini
+RUN echo 'export ODBCHOME=/opt/teradata/client/ODBC_64' >> /etc/profile \
+    && echo 'export ODBCINI=/opt/teradata/client/ODBC_64/odbc.ini' >> /etc/profile 
 
-ENTRYPOINT ["/scripts/init.sh"]
+EXPOSE 5006
