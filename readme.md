@@ -83,6 +83,7 @@ I have the directory `/wwwroot` on the host mounted to `/jupyter` in the contain
 docker run -d \
     --log-opt max-size=50m \
     -p 8000:8000 \
+    -p 5006:5006 \
     -e DOCKER_USER=`id -un` \
     -e DOCKER_USER_ID=`id -u` \
     -e DOCKER_PASSWORD=`id -un` \
@@ -97,6 +98,7 @@ docker run -d \
 docker run -d \
     --log-opt max-size=50m \
     -p 8000:8000 \
+    -p 5006:5006 \
     -e DOCKER_USER=`id -un` \
     -e DOCKER_USER_ID=`id -u` \
     -e DOCKER_PASSWORD=`id -un` \
@@ -110,6 +112,7 @@ docker run -d \
 docker run -d \
     --log-opt max-size=50m \
     -p 8000:8000 \
+    -p 5006:5006 \
     -e DOCKER_USER=`id -un` \
     -e DOCKER_USER_ID=`id -u` \
     -e DOCKER_PASSWORD=`id -un` \
