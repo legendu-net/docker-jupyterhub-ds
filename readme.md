@@ -192,8 +192,8 @@ the default password (same as the user name) is used.
         - [dclong/jupyterlab](https://hub.docker.com/r/dclong/jupyterlab)
             - [dclong/jupyterhub](https://hub.docker.com/r/dclong/jupyterhub/)
                 - [dclong/jupyterhub-py](https://hub.docker.com/r/dclong/jupyterhub-py/)
-                - [dclong/jupyterhub-beaker](https://hub.docker.com/r/dclong/jupyterhub-beaker/)
-                    - [dclong/jupyterhub-ds](https://hub.docker.com/r/dclong/jupyterhub-ds/)
+                    - [dclong/jupyterhub-beaker](https://hub.docker.com/r/dclong/jupyterhub-beaker/)
+                        - [dclong/jupyterhub-ds](https://hub.docker.com/r/dclong/jupyterhub-ds/)
 
 ## About the Author
 
