@@ -74,10 +74,10 @@ Keep the default if you don't know what are the best to use.
 - `USER_MEM_LIMIT`: The memory limit that each user can use.
     Note that this optional is not in effect now.
 
-The root directory of JupyterLab/Jupyter notebooks is `/jupyter` in the container.
+The root directory of JupyterLab/Jupyter notebooks is `/workdir` in the container.
 You can mount directory on the host to it as you wish.
 In the illustration command below,
-I have the directory `/wwwroot` on the host mounted to `/jupyter` in the container.
+I have the directory `/wwwroot` on the host mounted to `/workdir` in the container.
 
 ```
 docker run -d \
