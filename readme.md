@@ -1,8 +1,8 @@
 # [dclong/jupyterhub-ds](https://hub.docker.com/r/dclong/jupyterhub-ds/)
 
 JupyterHub for Data Science.
-This is the recommended Docker image to use
-if you want to do some data science related work in JupyterLab/Jupyter Notebook.
+**This is the recommended Docker image to use
+if you want to do some data science related work in JupyterLab/Jupyter Notebook.**
 
 ## Detailed Information
 
