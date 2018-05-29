@@ -2,7 +2,7 @@
 
 JupyterHub for Data Science.
 **This is the recommended Docker image to use
-if you want to do some data science related work in JupyterLab/Jupyter Notebook.**
+if you want to do data science related work in JupyterLab/Jupyter Notebook.**
 
 ## Detailed Information
 
