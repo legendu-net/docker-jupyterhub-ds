@@ -10,6 +10,7 @@ OS: the latest Ubuntu LTS
 Desktop Environment: None  
 Remote Desktop: None  
 JupyterLab: 0.33.2
+OpenJDK 8
 Jupyter Kernels:  
 - Python 3.6 (with popular packages)  
     + numpy scipy pandas dask  
@@ -23,8 +24,8 @@ Jupyter Kernels:
     + requests[socks] Scrapy beautifulsoup4 wget  
     + ansible
 - SQL (based on JDBC) via BeakerX  
-- Scala via BeakerX  
-- Java, Clojure, Groovy, Kotlin via BeakerX  
+- Scala 2.11 via BeakerX  
+- Java 8, Clojure, Groovy, Kotlin via BeakerX  
 
 ## Usage in Linux/Unix
 
