@@ -5,7 +5,7 @@ JupyterHub for Data Science.
 if you want to do data science related work in JupyterLab/Jupyter Notebook.**
 Note: Python packages in this version are managed using pip.
 If you prefer managing Python packages using conda, 
-please use the conda3 branch instead.
+please use the conda3 (corresponds to the conda3 tag) branch instead.
 
 ## Detailed Information
 
