@@ -114,22 +114,9 @@ docker run -d \
     -e DOCKER_GROUP_ID=`id -g` \
     -e DOCKER_ADMIN_USER=`id -un` \
     -e USER_MEM_LIMIT=4G \
-    -v $HOME:/workdir \
-    dclong/jupyterhub-ds
-```
-```
-docker run -d \
-    --log-opt max-size=50m \
-    -p 8000:8000 \
-    -p 5006:5006 \
-    -e DOCKER_USER=`id -un` \
-    -e DOCKER_USER_ID=`id -u` \
-    -e DOCKER_PASSWORD=`id -un` \
-    -e DOCKER_GROUP_ID=`id -g` \
-    -e DOCKER_ADMIN_USER=`id -un` \
-    -e USER_MEM_LIMIT=4G \
     -v `pwd`:/workdir \
-    registry.docker-cn.com/dclong/jupyterhub-ds
+    -v /home:/home_host \
+    dclong/jupyterhub-ds
 ```
 ## Use the JupyterHub Server
 
@@ -196,13 +183,15 @@ the default password (same as the user name) is used.
 
 [dclong/ubuntu_b](https://hub.docker.com/r/dclong/ubuntu_b/)
 
-- [dclong/conda](https://hub.docker.com/r/dclong/conda/)
+- [dclong/python](https://hub.docker.com/r/dclong/conda/)
     - [dclong/jupyter](https://hub.docker.com/r/dclong/jupyter/)
-        - [dclong/jupyterlab](https://hub.docker.com/r/dclong/jupyterlab)
-            - [dclong/jupyterhub](https://hub.docker.com/r/dclong/jupyterhub/)
-                - [dclong/jupyterhub-py](https://hub.docker.com/r/dclong/jupyterhub-py/)
-                    - [dclong/jupyterhub-beaker](https://hub.docker.com/r/dclong/jupyterhub-beakerx/)
-                        - [dclong/jupyterhub-ds](https://hub.docker.com/r/dclong/jupyterhub-ds/)
+        - [dclong/jupyter-nodejs](https://hub.docker.com/r/dclong/jupyter-nodejs/)
+            - [dclong/jupyterlab](https://hub.docker.com/r/dclong/jupyterlab)
+                - [dclong/jupyterhub](https://hub.docker.com/r/dclong/jupyterhub/)
+                    - [dclong/jupyterhub-jdk](https://hub.docker.com/r/dclong/jupyterhub-jdk/)
+                        - [dclong/jupyterhub-py](https://hub.docker.com/r/dclong/jupyterhub-py/)
+                            - [dclong/jupyterhub-beaker](https://hub.docker.com/r/dclong/jupyterhub-beakerx/)
+                                - [dclong/jupyterhub-ds](https://hub.docker.com/r/dclong/jupyterhub-ds/)
 
 ## About the Author
 
