@@ -3,6 +3,9 @@
 JupyterHub for Data Science.
 **This is the recommended Docker image to use
 if you want to do data science related work in JupyterLab/Jupyter Notebook.**
+Note: Python packages in this version are managed using pip.
+If you prefer managing Python packages using conda, 
+please use the conda3 branch instead.
 
 ## Detailed Information
 
@@ -10,8 +13,10 @@ OS: the latest Ubuntu LTS
 Desktop Environment: None  
 Remote Desktop: None  
 Jupyter Notebook: 5.6.0  
+NodeJS: 8.11.3
 JupyterLab: 0.33.2  
 OpenJDK 8
+Maven: 3.3.9
 Jupyter Kernels:  
 - Python 3.5.2 (with popular packages)  
     + numpy scipy pandas dask  
