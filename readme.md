@@ -24,7 +24,7 @@ Jupyter Kernels:
     + requests[socks] Scrapy beautifulsoup4 wget  
     + ansible
 - SQL (based on JDBC) via BeakerX  
-- Scala 2.11 via BeakerX  
+- Scala 2.11.2 via BeakerX  
 - Java 8, Clojure, Groovy, Kotlin via BeakerX  
 
 ## Usage in Linux/Unix
