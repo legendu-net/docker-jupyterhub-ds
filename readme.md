@@ -9,14 +9,15 @@ please use the **conda3** (corresponds to the conda3 tag) branch instead.
 
 ## Detailed Information
 
-OS: the latest Ubuntu LTS  
+OS: Ubuntu 16.04  
 Desktop Environment: None  
 Remote Desktop: None  
 Jupyter Notebook: 5.6.0  
-NodeJS: 8.11.3
+NodeJS: 8.11.3  
 JupyterLab: 0.33.2  
-OpenJDK 8
-Maven: 3.3.9
+JupyterHub: 0.9.1  
+OpenJDK 8  
+Maven: 3.3.9  
 Jupyter Kernels:  
 - Python 3.5.2 (with popular packages)  
     + numpy scipy pandas dask  
