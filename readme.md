@@ -10,7 +10,7 @@ OS: the latest Ubuntu LTS
 Desktop Environment: None  
 Remote Desktop: None  
 Jupyter Notebook: 5.6.0  
-JupyterLab: 0.33.2
+JupyterLab: 0.33.2 . 
 OpenJDK 8
 Jupyter Kernels:  
 - Python 3.5.2 (with popular packages)  
