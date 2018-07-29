@@ -9,10 +9,11 @@ if you want to do data science related work in JupyterLab/Jupyter Notebook.**
 OS: the latest Ubuntu LTS  
 Desktop Environment: None  
 Remote Desktop: None  
+Jupyter Notebook: 5.6.0
 JupyterLab: 0.33.2
 OpenJDK 8
 Jupyter Kernels:  
-- Python 3.6 (with popular packages)  
+- Python 3.5.2 (with popular packages)  
     + numpy scipy pandas dask  
     + torch torchvision tensorflow keras h2o  
     + gensim nltk  
