@@ -49,7 +49,7 @@ please refer to the offical Docker doc [Install Docker](https://docs.docker.com/
 
 ### Pull the Docker Image
 ```
-docker pull dclong/jupyterhub-ds
+docker pull dclong/jupyterhub-ds:conda3
 ```
 For people in mainland of China,
 please refer to the post
@@ -58,7 +58,7 @@ on ways to speed up pushing/pulling of Docker images.
 If you don't bother,
 then just use the command below.
 ```
-docker pull registry.docker-cn.com/dclong/jupyterhub-ds
+docker pull registry.docker-cn.com/dclong/jupyterhub-ds:conda3
 ```
 
 ### Start a Container
@@ -101,7 +101,7 @@ docker run -d \
     -e USER_MEM_LIMIT=4G \
     -v /wwwroot:/workdir \
     -v /home:/home_host \
-    dclong/jupyterhub-ds
+    dclong/jupyterhub-ds:conda3
 ```
 ```
 docker run -d \
@@ -116,7 +116,7 @@ docker run -d \
     -e USER_MEM_LIMIT=4G \
     -v `pwd`:/workdir \
     -v /home:/home_host \
-    dclong/jupyterhub-ds
+    dclong/jupyterhub-ds:conda3
 ```
 ## Use the JupyterHub Server
 
