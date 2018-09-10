@@ -99,7 +99,7 @@ docker run -d \
     -e DOCKER_GROUP_ID=`id -g` \
     -e DOCKER_ADMIN_USER=`id -un` \
     -e USER_MEM_LIMIT=4G \
-    -v /wwwroot:/workdir \
+    -v /workdir:/workdir \
     -v /home:/home_host \
     dclong/jupyterhub-ds
 ```
