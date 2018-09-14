@@ -4,7 +4,7 @@ RUN apt-get update -y \
     && apt-get install -y \
         tmux proxychains \
         q-text-as-data \
-        bash-completion \
+        bash-completion man-db \
     && apt-get autoremove \
     && apt-get autoclean
 
