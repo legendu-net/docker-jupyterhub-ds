@@ -19,7 +19,7 @@ JupyterHub: 0.9.3
 OpenJDK 8  
 Maven: 3.3.9  
 Jupyter Kernels:  
-- Python 3.5.2 (with popular packages)  
+- Python 3.6.5 (with popular packages)  
     + numpy scipy pandas dask  
     + torch torchvision tensorflow keras h2o  
     + gensim nltk  
