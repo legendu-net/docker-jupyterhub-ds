@@ -9,13 +9,13 @@ please use the **conda3** (corresponds to the conda3 tag) branch instead.
 
 ## Detailed Information
 
-OS: Ubuntu 16.04  
+OS: Ubuntu 18.04  
 Desktop Environment: None  
 Remote Desktop: None  
 Jupyter Notebook: 5.6.0  
 NodeJS: 8.11.3  
-JupyterLab: 0.33.2  
-JupyterHub: 0.9.1  
+JupyterLab: 0.34.11  
+JupyterHub: 0.9.3  
 OpenJDK 8  
 Maven: 3.3.9  
 Jupyter Kernels:  
