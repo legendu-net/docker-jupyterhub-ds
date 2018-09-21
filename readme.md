@@ -9,17 +9,17 @@ please use the **conda3** (corresponds to the conda3 tag) branch instead.
 
 ## Detailed Information
 
-OS: Ubuntu 16.04  
+OS: Ubuntu 18.04  
 Desktop Environment: None  
 Remote Desktop: None  
 Jupyter Notebook: 5.6.0  
 NodeJS: 8.11.3  
-JupyterLab: 0.33.2  
-JupyterHub: 0.9.1  
+JupyterLab: 0.34.11  
+JupyterHub: 0.9.3  
 OpenJDK 8  
 Maven: 3.3.9  
 Jupyter Kernels:  
-- Python 3.5.2 (with popular packages)  
+- Python 3.6.5 (with popular packages)  
     + numpy scipy pandas dask  
     + torch torchvision tensorflow keras h2o  
     + gensim nltk  
@@ -30,9 +30,9 @@ Jupyter Kernels:
     + pysocks  
     + requests[socks] Scrapy beautifulsoup4 wget  
     + ansible
-- SQL (based on JDBC) via BeakerX 1.0.0
-- Scala 2.11.2 via BeakerX 1.0.0
-- Java 8, Clojure, Groovy, Kotlin via BeakerX 1.0.0
+- SQL (based on JDBC) via BeakerX 1.1.0
+- Scala 2.11.12 via BeakerX 1.1.0
+- Java 8, Clojure, Groovy, Kotlin via BeakerX 1.1.0
 
 ## Usage in Linux/Unix
 
@@ -101,7 +101,7 @@ docker run -d \
     -e USER_MEM_LIMIT=4G \
     -v /workdir:/workdir \
     -v /home:/home_host \
-    dclong/jupyterhub-ds
+    dclong/jupyterhub-ds:18.04
 ```
 ```
 docker run -d \
@@ -116,7 +116,7 @@ docker run -d \
     -e USER_MEM_LIMIT=4G \
     -v `pwd`:/workdir \
     -v /home:/home_host \
-    dclong/jupyterhub-ds
+    dclong/jupyterhub-ds:18.04
 ```
 ## Use the JupyterHub Server
 
