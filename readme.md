@@ -87,7 +87,7 @@ Keep the default if you don't know what are the best to use.
 The root directory of JupyterLab/Jupyter notebooks is `/workdir` in the container.
 You can mount directory on the host to it as you wish.
 In the illustration command below,
-I have the directory `/wwwroot` on the host mounted to `/workdir` in the container.
+I have the directory `/workdir` on the host mounted to `/workdir` in the container.
 
 ```
 docker run -d \
