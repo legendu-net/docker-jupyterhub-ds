@@ -1,4 +1,4 @@
-FROM dclong/jupyterhub-beakerx
+FROM dclong/jupyterhub-beakerx:18.10
 
 RUN apt-get update -y \
     && apt-get install -y \
