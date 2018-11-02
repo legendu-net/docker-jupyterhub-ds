@@ -5,8 +5,16 @@ RUN apt-get update -y \
         tmux proxychains \
         q-text-as-data \
         bash-completion man-db \
+        julia \
     && apt-get autoremove \
     && apt-get autoclean
+
+# install IJulia  
+ENV JUPYTER=/usr/local/bin/jupyter
+RUN julia -e 'empty!(DEPOT_PATH); push!(DEPOT_PATH, "/usr/share/julia"); using Pkg; Pkg.add("IJulia")' \
+    && cp -r /root/.local/share/jupyter/kernels/julia-* /usr/local/share/jupyter/kernels/ \
+    && chmod -R +rx /usr/share/julia/ \
+    && chmod -R +rx /usr/local/share/jupyter/kernels/julia-*/
 
 # configure proxychains
 COPY settings/proxychains.conf /etc/proxychains.conf
