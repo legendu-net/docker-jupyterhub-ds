@@ -15,7 +15,7 @@ Desktop Environment: None
 Remote Desktop: None  
 Jupyter Notebook: 5.6.0  
 NodeJS: 8.11.3  
-JupyterLab: 0.35.2  
+JupyterLab: 0.35.4  
 JupyterHub: 0.9.3  
 OpenJDK 8  
 Maven: 3.3.9  
