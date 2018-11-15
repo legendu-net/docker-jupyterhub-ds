@@ -104,7 +104,7 @@ docker run -d \
     -e USER_MEM_LIMIT=4G \
     -v /workdir:/workdir \
     -v /home:/home_host \
-    dclong/jupyterhub-ds:18.10
+    dclong/jupyterhub-ds
 ```
 ```
 docker run -d \
@@ -121,7 +121,7 @@ docker run -d \
     -e USER_MEM_LIMIT=4G \
     -v `pwd`:/workdir \
     -v /home:/home_host \
-    dclong/jupyterhub-ds:18.10
+    dclong/jupyterhub-ds
 ```
 ## Use the JupyterHub Server
 
