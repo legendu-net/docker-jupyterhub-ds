@@ -2,9 +2,8 @@ FROM dclong/jupyterhub-beakerx:18.10
 
 RUN apt-get update -y \
     && apt-get install -y \
-        tmux proxychains \
+        tmux \
         q-text-as-data \
-        bash-completion man-db \
         julia \
     && apt-get autoremove \
     && apt-get autoclean
