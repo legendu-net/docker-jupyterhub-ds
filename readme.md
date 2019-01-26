@@ -13,7 +13,7 @@ OS: Ubuntu 18.04
 Time Zone: US Pacific Time  
 Desktop Environment: None  
 Remote Desktop: None  
-Jupyter Notebook: 5.6.0  
+Jupyter Notebook: 5.7.0  
 NodeJS: 10.15.0  
 JupyterLab: 0.35.4  
 JupyterHub: 0.9.3  
@@ -106,7 +106,7 @@ docker run -d \
     -v /home:/home_host \
     dclong/jupyterhub-ds
 ```
-The following command does the same as the above one 
+The following command (only works on Linux) does the same as the above one 
 except that it limits the use of CPU and memory.
 ```
 docker run -d \
