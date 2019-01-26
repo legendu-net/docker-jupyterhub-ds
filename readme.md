@@ -103,7 +103,7 @@ docker run -d \
     -e DOCKER_ADMIN_USER=`id -un` \
     -e USER_MEM_LIMIT=4G \
     -v `pwd`:/workdir \
-    -v /home:/home_host \
+    -v `dirname $HOME`:/home_host \
     dclong/jupyterhub-ds
 ```
 The following command (only works on Linux) does the same as the above one 
@@ -123,7 +123,7 @@ docker run -d \
     -e DOCKER_ADMIN_USER=`id -un` \
     -e USER_MEM_LIMIT=4G \
     -v `pwd`:/workdir \
-    -v /home:/home_host \
+    -v `dirname $HOME`:/home_host \
     dclong/jupyterhub-ds
 ```
 ## Use the JupyterHub Server
