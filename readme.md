@@ -167,16 +167,7 @@ Since we didn't specify a password for the user,
 the default password (same as the user name) is used.
 
 ## Known Issues
-
-1. Lack of resource management.
-    The argument `USER_MEM_LIMIT` is not in effect due to the default Spawner used.
-    This is not big issue if you have a few light users.
-    However,
-    if there are many heavy users (especially Spark notebook users) you server can run out of memory.
-    It's good practice to deploy the Docker container on a server with large memory
-    if it's intended for use by a team
-    and have users close unused notebooks to save memory.  
-2. The subprocess managment issue.
+1. The subprocess managment issue.
     This is not an issue at in most use cases.
     This Docker image launch service using a shell script
     so there won't be orphan subprocesses
