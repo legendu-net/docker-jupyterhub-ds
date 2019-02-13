@@ -9,7 +9,8 @@ please use the **conda3** (corresponds to the conda3 tag) branch instead.
 
 ## Detailed Information
 
-Please refer to [My Docker Images](http://www.legendu.net/en/blog/my-docker-images/) 
+Please refer to the Section 
+[List of Images and Detailed Information](http://www.legendu.net/en/blog/my-docker-images/#list-of-images-and-detailed-information) of the post [My Docker Images](http://www.legendu.net/en/blog/my-docker-images/) 
 for detailed information about this Docker image.
 
 ## Usage in Linux/Unix
