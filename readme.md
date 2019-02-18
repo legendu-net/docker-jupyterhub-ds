@@ -7,13 +7,6 @@ Note: Python packages in this version are managed using pip.
 If you prefer managing Python packages using conda, 
 please use the **conda3** (corresponds to the conda3 tag) branch instead.
 
-## Detailed Information
-
-Please refer to the Section 
-[List of Images and Detailed Information](http://www.legendu.net/en/blog/my-docker-images/#list-of-images-and-detailed-information) 
-of the post [My Docker Images](http://www.legendu.net/en/blog/my-docker-images/) 
-for detailed information about this Docker image.
-
 ## Usage in Linux/Unix
 
 Please refer to the Section
@@ -58,6 +51,9 @@ docker run -d \
     -v `dirname $HOME`:/home_host \
     dclong/jupyterhub-ds
 ```
+
+## [Detailed Information](http://www.legendu.net/en/blog/my-docker-images/#list-of-images-and-detailed-information) 
+
 ## [Use the JupyterHub Server](http://www.legendu.net/en/blog/my-docker-images/#use-the-jupyterhub-server)
 
 ## [Add a New User to the JupyterHub Server](http://www.legendu.net/en/blog/my-docker-images/#add-a-new-user-to-the-jupyterhub-server)
