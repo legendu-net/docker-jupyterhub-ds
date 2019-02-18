@@ -58,19 +58,9 @@ docker run -d \
     -v `dirname $HOME`:/home_host \
     dclong/jupyterhub-ds
 ```
-## Use the JupyterHub Server
+## [Use the JupyterHub Server](http://www.legendu.net/en/blog/my-docker-images/#use-the-jupyterhub-server)
 
-Please refer to the Section
-[Use the JupyterHub Server](http://www.legendu.net/en/blog/my-docker-images/#use-the-jupyterhub-server)
-of the post [My Docker Images](http://www.legendu.net/en/blog/my-docker-images/) 
-on how to login to the JupyterHub server.
-
-## Add a New User to the JupyterHub Server
-
-Please refer to the Section
-[Add a New User to the JupyterHub Server](http://www.legendu.net/en/blog/my-docker-images/#add-a-new-user-to-the-jupyterhub-server)
-of the post [My Docker Images](http://www.legendu.net/en/blog/my-docker-images/) 
-on how to add new users to the JupyterHub Server.
+## [Add a New User to the JupyterHub Server](http://www.legendu.net/en/blog/my-docker-images/#add-a-new-user-to-the-jupyterhub-server)
 
 ## [Known Issues](http://www.legendu.net/en/blog/my-docker-images/#known-issues)
 
