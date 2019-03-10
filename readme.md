@@ -3,7 +3,7 @@
 JupyterHub for Data Science.
 **This is the recommended Docker image to use
 if you want to do data science related work in JupyterLab/Jupyter Notebook.**
-Note: Python packages in this version are managed using pip.
+Note: Python packages in this version are managed using pip instead of conda.
 
 ## Usage in Linux/Unix
 
