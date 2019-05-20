@@ -4,7 +4,7 @@ RUN apt-get update -y \
     && apt-get install -y \
         proxychains \
     && apt-get autoremove \
-    && apt-get autoclean
+    && apt-get clean
 
 # proxychains configuration
 COPY settings/proxychains.conf /etc/proxychains.conf
