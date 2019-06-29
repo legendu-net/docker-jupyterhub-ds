@@ -1,4 +1,4 @@
-# [dclong/jupyterhub-ds](https://hub.docker.com/r/dclong/jupyterhub-ds/)
+# dclong/jupyterhub-ds [@DockerHub](https://hub.docker.com/r/dclong/jupyterhub-ds/) | [@GitHub](https://github.com/dclong/docker-jupyterhub-ds)
 
 JupyterHub for Data Science.
 **This is the recommended Docker image to use
