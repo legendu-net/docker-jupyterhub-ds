@@ -49,13 +49,14 @@ docker run -d \
     -v `dirname $HOME`:/home_host \
     dclong/jupyterhub-ds
 ```
-## [Use Spark in JupyterLab Notebook](http://www.legendu.net/en/blog/my-docker-images/#use-spark-in-jupyterlab-notebook)
-
-## [Detailed Information](http://www.legendu.net/en/blog/my-docker-images/#list-of-images-and-detailed-information) 
 
 ## [Use the JupyterHub Server](http://www.legendu.net/en/blog/my-docker-images/#use-the-jupyterhub-server)
 
 ## [Add a New User to the JupyterHub Server](http://www.legendu.net/en/blog/my-docker-images/#add-a-new-user-to-the-jupyterhub-server)
+
+## [Use Spark in JupyterLab Notebook](http://www.legendu.net/en/blog/my-docker-images/#use-spark-in-jupyterlab-notebook)
+
+## [Detailed Information](http://www.legendu.net/en/blog/my-docker-images/#list-of-images-and-detailed-information) 
 
 ## [Known Issues](http://www.legendu.net/en/blog/my-docker-images/#known-issues)
 
