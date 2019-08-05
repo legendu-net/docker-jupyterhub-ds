@@ -2,7 +2,7 @@ FROM dclong/jupyterhub-beakerx
 
 RUN apt-get update -y \
     && apt-get install -y \
-        wajig wamerican \
+        cron wamerican wajig \
         proxychains wget \
     && apt-get autoremove \
     && apt-get clean
