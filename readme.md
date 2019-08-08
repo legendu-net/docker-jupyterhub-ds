@@ -18,6 +18,7 @@ to `/workdir` and `/home_host` in the container respectively.
 ```
 docker run -d \
     --name jupyterhub-ds \
+    --hostname jupyterhub-ds \
     --log-opt max-size=50m \
     -p 8000:8000 \
     -p 5006:5006 \
