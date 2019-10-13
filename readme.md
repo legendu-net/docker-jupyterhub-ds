@@ -42,7 +42,7 @@ docker run -d \
     --cpus=$((`nproc` - 1)) \
     -p 8000:8000 \
     -p 5006:5006 \
-    -e DOCKER_USER=`id -un` \
+    -e DOCKER_USER=$(id -un) \
     -e DOCKER_USER_ID=`id -u` \
     -e DOCKER_PASSWORD=`id -un` \
     -e DOCKER_GROUP_ID=`id -g` \
