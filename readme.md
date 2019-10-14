@@ -39,7 +39,7 @@ docker run -d \
     --hostname jupyterhub-ds \
     --log-opt max-size=50m \
     --memory=$(($(head -n 1 /proc/meminfo | awk '{print $2}') * 4 / 5))k \
-    --cpus=$((`nproc` - 1)) \
+    --cpus=$(($(nproc) - 1)) \
     -p 8000:8000 \
     -p 5006:5006 \
     -e DOCKER_USER=$(id -un) \
