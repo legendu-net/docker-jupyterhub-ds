@@ -58,6 +58,8 @@ docker run -d \
 
 ## [Use Spark in JupyterLab Notebook](http://www.legendu.net/en/blog/my-docker-images/#use-spark-in-jupyterlab-notebook)
 
+## [Log Information](http://www.legendu.net/en/blog/my-docker-images/#docker-container-logs)
+
 ## [Detailed Information](http://www.legendu.net/en/blog/my-docker-images/#list-of-images-and-detailed-information) 
 
 ## [Known Issues](http://www.legendu.net/en/blog/my-docker-images/#known-issues)
