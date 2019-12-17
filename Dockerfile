@@ -8,6 +8,9 @@ RUN apt-get update -y \
     && apt-get autoremove \
     && apt-get clean
 
+RUN xinstall spark -ic \
+    && pip3 install pyspark findspark optimuspyspark
+
 COPY scripts/ /scripts/
 # proxychains configuration
 COPY settings/proxychains.conf /etc/proxychains.conf
