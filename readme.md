@@ -5,6 +5,9 @@ JupyterHub for Data Science.
 if you want to do data science related work in JupyterLab/Jupyter Notebook.**
 Note: Python packages in this version are managed using pip instead of conda.
 
+## Prerequisite
+You need to [install Docker](http://www.legendu.net/en/blog/docker-installation/) before you use this Docker image.
+
 ## Usage in Linux/Unix
 
 Please refer to the Section
