@@ -1,7 +1,7 @@
 FROM dclong/jupyterhub-beakerx
 
 RUN apt-get update -y \
-    && apt-get install -y \
+    && apt-get install -y --no-install-recommends \
         cron wamerican wajig \
         proxychains wget git-lfs \
         highlight \
