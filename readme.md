@@ -33,7 +33,7 @@ docker run -d \
     -v $(dirname $HOME):/home_host \
     dclong/jupyterhub-ds /scripts/sys/init.sh
 ```
-Use the image with the `next` tag (which is the testing version of dclong/jupyterhub-ds).
+Use the image with the `next` tag (which is the testing/next version of dclong/jupyterhub-ds).
 ```
 docker run -d \
     --hostname jupyterhub-ds \
@@ -68,7 +68,24 @@ docker run -d \
     -v $(dirname $HOME):/home_host \
     dclong/jupyterhub-ds /scripts/sys/init.sh
 ```
-
+Use the image with the `next` tag (which is the testing/next version of dclong/jupyterhub-ds).
+```
+docker run -d \
+    --hostname jupyterhub-ds \
+    --log-opt max-size=50m \
+    --memory=$(($(head -n 1 /proc/meminfo | awk '{print $2}') * 4 / 5))k \
+    --cpus=$(($(nproc) - 1)) \
+    -p 8000:8000 \
+    -p 5006:5006 \
+    -e DOCKER_USER=$(id -un) \
+    -e DOCKER_USER_ID=$(id -u) \
+    -e DOCKER_PASSWORD=$(id -un) \
+    -e DOCKER_GROUP_ID=$(id -g) \
+    -e DOCKER_ADMIN_USER=$(id -un) \
+    -v $(pwd):/workdir \
+    -v $(dirname $HOME):/home_host \
+    dclong/jupyterhub-ds:next /scripts/sys/init.sh
+```
 ## [Use the JupyterHub Server](http://www.legendu.net/en/blog/my-docker-images/#use-the-jupyterhub-server)
 
 ## [Add a New User to the JupyterHub Server](http://www.legendu.net/en/blog/my-docker-images/#add-a-new-user-to-the-jupyterhub-server)
