@@ -1,4 +1,4 @@
-FROM dclong/jupyterhub-beakerx
+FROM dclong/jupyterhub-more
 
 RUN apt-get update -y \
     && apt-get install -y --no-install-recommends \
