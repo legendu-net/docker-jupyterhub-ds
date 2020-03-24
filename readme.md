@@ -23,6 +23,7 @@ docker run -d \
     --hostname jupyterhub-ds \
     --log-opt max-size=50m \
     -p 8000:8000 \
+    -p 8888:8888 \
     -p 5006:5006 \
     -e DOCKER_USER=$(id -un) \
     -e DOCKER_USER_ID=$(id -u) \
@@ -39,6 +40,7 @@ docker run -d \
     --hostname jupyterhub-ds \
     --log-opt max-size=50m \
     -p 8000:8000 \
+    -p 8888:8888 \
     -p 5006:5006 \
     -e DOCKER_USER=$(id -un) \
     -e DOCKER_USER_ID=$(id -u) \
@@ -58,6 +60,7 @@ docker run -d \
     --memory=$(($(head -n 1 /proc/meminfo | awk '{print $2}') * 4 / 5))k \
     --cpus=$(($(nproc) - 1)) \
     -p 8000:8000 \
+    -p 8888:8888 \
     -p 5006:5006 \
     -e DOCKER_USER=$(id -un) \
     -e DOCKER_USER_ID=$(id -u) \
@@ -76,6 +79,7 @@ docker run -d \
     --memory=$(($(head -n 1 /proc/meminfo | awk '{print $2}') * 4 / 5))k \
     --cpus=$(($(nproc) - 1)) \
     -p 8000:8000 \
+    -p 8888:8888 \
     -p 5006:5006 \
     -e DOCKER_USER=$(id -un) \
     -e DOCKER_USER_ID=$(id -u) \
