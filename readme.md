@@ -12,7 +12,7 @@ You need to [install Docker](http://www.legendu.net/en/blog/docker-installation/
 
 ## Usage in Linux/Unix
 
-Please refer to the Section
+Please refer to the section
 [Usage](http://www.legendu.net/en/blog/my-docker-images/#usage)
 of the post [My Docker Images](http://www.legendu.net/en/blog/my-docker-images/) 
 for detailed instruction on how to use the Docker image.
