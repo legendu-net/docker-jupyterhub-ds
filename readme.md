@@ -31,8 +31,8 @@ docker run -d \
     -e DOCKER_PASSWORD=$(id -un) \
     -e DOCKER_GROUP_ID=$(id -g) \
     -e DOCKER_ADMIN_USER=$(id -un) \
-    -v $(pwd):/workdir \
-    -v $(dirname $HOME):/home_host \
+    -v "$(pwd)":/workdir \
+    -v "$(dirname $HOME)":/home_host \
     dclong/jupyterhub-ds /scripts/sys/init.sh
 ```
 Use the image with the `next` tag (which is the testing/next version of dclong/jupyterhub-ds).
@@ -47,8 +47,8 @@ docker run -d \
     -e DOCKER_PASSWORD=$(id -un) \
     -e DOCKER_GROUP_ID=$(id -g) \
     -e DOCKER_ADMIN_USER=$(id -un) \
-    -v $(pwd):/workdir \
-    -v $(dirname $HOME):/home_host \
+    -v "$(pwd)":/workdir \
+    -v "$(dirname $HOME)":/home_host \
     dclong/jupyterhub-ds:next /scripts/sys/init.sh
 ```
 The following command (*only works on Linux*) does the same as the above one 
