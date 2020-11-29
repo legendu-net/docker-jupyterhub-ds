@@ -87,7 +87,14 @@ docker run -d \
     dclong/jupyterhub-ds:next /scripts/sys/init.sh
 ```
 ## Important Historical Images/Tags 
+
+Since `debain:testing` is used as the very base image of all `debian` tagged images,
+it might be broken sometimes due to expertimental changes 
+introduced into `debian:testing`.
+Below are a list of historical images that worked well.
+
 - dclong/jupyterhub-ds:debian_111510 
+
 ## [Use the JupyterHub Server](http://www.legendu.net/en/blog/my-docker-images/#use-the-jupyterhub-server)
 
 ## [Add a New User to the JupyterHub Server](http://www.legendu.net/en/blog/my-docker-images/#add-a-new-user-to-the-jupyterhub-server)
