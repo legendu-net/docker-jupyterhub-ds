@@ -94,6 +94,21 @@ introduced into `debian:testing`.
 Below are a list of historical images that worked well.
 
 - dclong/jupyterhub-ds:debian_111510 
+    ```
+    docker run -d \
+        --hostname jupyterhub-ds \
+        --log-opt max-size=50m \
+        -p 8000:8000 \
+        -p 5006:5006 \
+        -e DOCKER_USER=$(id -un) \
+        -e DOCKER_USER_ID=$(id -u) \
+        -e DOCKER_PASSWORD=$(id -un) \
+        -e DOCKER_GROUP_ID=$(id -g) \
+        -e DOCKER_ADMIN_USER=$(id -un) \
+        -v $(pwd):/workdir \
+        -v $(dirname $HOME):/home_host \
+        dclong/jupyterhub-ds:debian_111510 /scripts/sys/init.sh
+    ```
 
 ## [Use the JupyterHub Server](http://www.legendu.net/en/blog/my-docker-images/#use-the-jupyterhub-server)
 
