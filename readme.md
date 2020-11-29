@@ -86,6 +86,8 @@ docker run -d \
     -v $(dirname $HOME):/home_host \
     dclong/jupyterhub-ds:next /scripts/sys/init.sh
 ```
+## Important Historical Images/Tags 
+- dclong/jupyterhub-ds:debian_111510 
 ## [Use the JupyterHub Server](http://www.legendu.net/en/blog/my-docker-images/#use-the-jupyterhub-server)
 
 ## [Add a New User to the JupyterHub Server](http://www.legendu.net/en/blog/my-docker-images/#add-a-new-user-to-the-jupyterhub-server)
