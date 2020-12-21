@@ -21,7 +21,7 @@ The following command starts a container
 and mounts the current working directory and `/home` on the host machine 
 to `/workdir` and `/home_host` in the container respectively.
 ```
-docker run -d \
+docker run -d --init \
     --hostname jupyterhub-ds \
     --log-opt max-size=50m \
     -p 8000:8000 \
@@ -37,7 +37,7 @@ docker run -d \
 ```
 Use the image with the `next` tag (which is the testing/next version of dclong/jupyterhub-ds).
 ```
-docker run -d \
+docker run -d --init \
     --hostname jupyterhub-ds \
     --log-opt max-size=50m \
     -p 8000:8000 \
@@ -54,7 +54,7 @@ docker run -d \
 The following command (*only works on Linux*) does the same as the above one 
 except that it limits the use of CPU and memory.
 ```
-docker run -d \
+docker run -d --init \
     --hostname jupyterhub-ds \
     --log-opt max-size=50m \
     --memory=$(($(head -n 1 /proc/meminfo | awk '{print $2}') * 4 / 5))k \
@@ -72,7 +72,7 @@ docker run -d \
 ```
 Use the image with the `next` tag (which is the testing/next version of dclong/jupyterhub-ds).
 ```
-docker run -d \
+docker run -d --init \
     --hostname jupyterhub-ds \
     --log-opt max-size=50m \
     --memory=$(($(head -n 1 /proc/meminfo | awk '{print $2}') * 4 / 5))k \
@@ -88,6 +88,30 @@ docker run -d \
     -v "$(dirname $HOME)":/home_host \
     dclong/jupyterhub-ds:next /scripts/sys/init.sh
 ```
+## Important Historical Images/Tags 
+
+Since `debain:testing` is used as the very base image of all `debian` tagged images,
+it might be broken sometimes due to expertimental changes 
+introduced into `debian:testing`.
+Below are a list of historical images that worked well.
+
+- dclong/jupyterhub-ds:debian_111510 
+    ```
+    docker run -d --init \
+        --hostname jupyterhub-ds \
+        --log-opt max-size=50m \
+        -p 8000:8000 \
+        -p 5006:5006 \
+        -e DOCKER_USER=$(id -un) \
+        -e DOCKER_USER_ID=$(id -u) \
+        -e DOCKER_PASSWORD=$(id -un) \
+        -e DOCKER_GROUP_ID=$(id -g) \
+        -e DOCKER_ADMIN_USER=$(id -un) \
+        -v $(pwd):/workdir \
+        -v $(dirname $HOME):/home_host \
+        dclong/jupyterhub-ds:debian_111510 /scripts/sys/init.sh
+    ```
+
 ## [Use the JupyterHub Server](http://www.legendu.net/en/blog/my-docker-images/#use-the-jupyterhub-server)
 
 ## [Add a New User to the JupyterHub Server](http://www.legendu.net/en/blog/my-docker-images/#add-a-new-user-to-the-jupyterhub-server)
