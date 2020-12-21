@@ -19,7 +19,7 @@ The following command starts a container
 and mounts the current working directory and `/home` on the host machine 
 to `/workdir` and `/home_host` in the container respectively.
 ```
-docker run -d \
+docker run -d --init \
     --hostname jupyterhub-ds \
     --log-opt max-size=50m \
     -p 8000:8000 \
@@ -35,7 +35,7 @@ docker run -d \
 ```
 Use the image with the `next` tag (which is the testing/next version of dclong/jupyterhub-ds).
 ```
-docker run -d \
+docker run -d --init \
     --hostname jupyterhub-ds \
     --log-opt max-size=50m \
     -p 8000:8000 \
@@ -52,7 +52,7 @@ docker run -d \
 The following command (*only works on Linux*) does the same as the above one 
 except that it limits the use of CPU and memory.
 ```
-docker run -d \
+docker run -d --init \
     --hostname jupyterhub-ds \
     --log-opt max-size=50m \
     --memory=$(($(head -n 1 /proc/meminfo | awk '{print $2}') * 4 / 5))k \
@@ -70,7 +70,7 @@ docker run -d \
 ```
 Use the image with the `next` tag (which is the testing/next version of dclong/jupyterhub-ds).
 ```
-docker run -d \
+docker run -d --init \
     --hostname jupyterhub-ds \
     --log-opt max-size=50m \
     --memory=$(($(head -n 1 /proc/meminfo | awk '{print $2}') * 4 / 5))k \
@@ -95,7 +95,7 @@ Below are a list of historical images that worked well.
 
 - dclong/jupyterhub-ds:debian_111510 
     ```
-    docker run -d \
+    docker run -d --init \
         --hostname jupyterhub-ds \
         --log-opt max-size=50m \
         -p 8000:8000 \
