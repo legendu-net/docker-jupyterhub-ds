@@ -17,7 +17,7 @@ RUN pip3 install --no-cache-dir \
         scikit-learn lightgbm graphviz \
         matplotlib bokeh holoviews[recommended] hvplot \
         tabulate \
-        'JPype1>=0.7.0' 'JayDeBeApi>=1.2.0' sqlparse \
+        'JPype1>=0.7.0' sqlparse \
         requests[socks] lxml notifiers \
     && pip3 install git+https://github.com/dclong/dsutil@main
 RUN jupyter labextension install @pyviz/jupyterlab_pyviz \
