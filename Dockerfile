@@ -20,8 +20,8 @@ RUN pip3 install --no-cache-dir \
         'JPype1>=0.7.0' sqlparse \
         requests[socks] lxml notifiers \
         git+https://github.com/dclong/dsutil@main
-#RUN jupyter labextension install @pyviz/jupyterlab_pyviz \
-#    && npm cache clean --force
+RUN jupyter labextension install @pyviz/jupyterlab_pyviz \
+    && npm cache clean --force
 
 COPY scripts/ /scripts/
 # proxychains configuration
