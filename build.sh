@@ -1,3 +1,4 @@
 #!/bin/bash
 
-docker build -t dclong/jupyterhub-ds .
+docker pull dclong/jupyterhub-more:next
+docker build -t dclong/jupyterhub-ds:next .
