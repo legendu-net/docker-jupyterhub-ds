@@ -2,7 +2,9 @@
 
 JupyterHub for Data Science.
 **This is the recommended Docker image to use
-if you want to do data science related work in JupyterLab/Jupyter Notebook.**
+if you want to do data science related work in JupyterLab/Jupyter Notebook.
+For deep learning leveraging GPU, 
+please use [dclong/jupyterhub-ai](https://hub.docker.com/r/dclong/jupyterhub-ai/).**
 Note: Python packages in this version are managed using pip instead of conda.
 
 ## Prerequisite
