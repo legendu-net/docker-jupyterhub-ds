@@ -107,8 +107,8 @@ Below are a list of historical images that worked well.
         -e DOCKER_PASSWORD=$(id -un) \
         -e DOCKER_GROUP_ID=$(id -g) \
         -e DOCKER_ADMIN_USER=$(id -un) \
-        -v $(pwd):/workdir \
-        -v $(dirname $HOME):/home_host \
+        -v "$(pwd)":/workdir \
+        -v "$(dirname $HOME)":/home_host \
         dclong/jupyterhub-ds:debian_111510 /scripts/sys/init.sh
     ```
 
