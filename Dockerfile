@@ -19,7 +19,8 @@ RUN pip3 install --no-cache-dir \
         tabulate \
         'JPype1>=0.7.0' sqlparse \
         requests[socks] lxml notifiers \
-        git+https://github.com/dclong/dsutil@main
+        git+https://github.com/dclong/dsutil@main \
+        jupyterlab-lsp 'python-language-server[all]'
 
 COPY scripts/ /scripts/
 # proxychains configuration
