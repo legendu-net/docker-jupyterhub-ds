@@ -90,6 +90,7 @@ docker run -d --init \
 ```
 ## Launch a JupyterLab Instead of JupyterHub 
 
+You can still launch a JupyterLab service using this Docker image. 
 ```
 docker run -d --init \
     --hostname jupyterlab \
