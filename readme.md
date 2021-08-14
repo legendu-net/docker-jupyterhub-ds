@@ -88,7 +88,7 @@ docker run -d --init \
     -v "$(dirname $HOME)":/home_host \
     dclong/jupyterhub-ds:next /scripts/sys/init.sh
 ```
-## Launch a JupyterLab Instead of JupyterHub 
+### Launch a JupyterLab Instead of JupyterHub 
 
 You can still launch a JupyterLab service using this Docker image. 
 ```
