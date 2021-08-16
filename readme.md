@@ -88,29 +88,25 @@ docker run -d --init \
     -v "$(dirname $HOME)":/home_host \
     dclong/jupyterhub-ds:next /scripts/sys/init.sh
 ```
-## Important Historical Images/Tags 
+### Launch a JupyterLab Instead of JupyterHub 
 
-Since `debain:testing` is used as the very base image of all `debian` tagged images,
-it might be broken sometimes due to expertimental changes 
-introduced into `debian:testing`.
-Below are a list of historical images that worked well.
-
-- dclong/jupyterhub-ds:debian_111510 
-    ```
-    docker run -d --init \
-        --hostname jupyterhub-ds \
-        --log-opt max-size=50m \
-        -p 8000:8000 \
-        -p 5006:5006 \
-        -e DOCKER_USER=$(id -un) \
-        -e DOCKER_USER_ID=$(id -u) \
-        -e DOCKER_PASSWORD=$(id -un) \
-        -e DOCKER_GROUP_ID=$(id -g) \
-        -e DOCKER_ADMIN_USER=$(id -un) \
-        -v "$(pwd)":/workdir \
-        -v "$(dirname $HOME)":/home_host \
-        dclong/jupyterhub-ds:debian_111510 /scripts/sys/init.sh
-    ```
+You can still launch a JupyterLab service using this Docker image. 
+```
+docker run -d --init \
+    --hostname jupyterlab \
+    --log-opt max-size=50m \
+    --memory=$(($(head -n 1 /proc/meminfo | awk '{print $2}') * 4 / 5))k \
+    --cpus=$(($(nproc) - 1)) \
+    -p 8888:8888 \
+    -e DOCKER_USER=$(id -un) \
+    -e DOCKER_USER_ID=$(id -u) \
+    -e DOCKER_PASSWORD=$(id -un) \
+    -e DOCKER_GROUP_ID=$(id -g) \
+    -e DOCKER_ADMIN_USER=$(id -un) \
+    -v "$(pwd)":/workdir \
+    -v "$(dirname $HOME)":/home_host \
+    dclong/jupyterhub-ds /scripts/sys/init.sh /scripts/sys/launch_jlab.sh
+```
 
 ## [Use the JupyterHub Server](http://www.legendu.net/en/blog/my-docker-images/#use-the-jupyterhub-server)
 
