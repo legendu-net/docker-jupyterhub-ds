@@ -9,7 +9,7 @@ RUN apt-get update -y \
         highlight \
     && apt-get autoremove -y \
     && apt-get clean -y \
-    && rm -rf /var/lib/apt/lists/*
+    && rm -rf /tmp/* /var/lib/apt/lists/* /var/tmp/*
 
 #RUN pip3 install --upgrade --ignore-installed entrypoints
 RUN pip3 install \
