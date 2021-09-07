@@ -7,11 +7,12 @@ RUN apt-get update -y \
         cron wamerican \
         proxychains wget git-lfs \
         highlight \
-    && apt-get autoremove \
-    && apt-get clean
+    && apt-get autoremove -y \
+    && apt-get clean -y \
+    && rm -rf /var/lib/apt/lists/*
 
-#RUN pip3 install --no-cache-dir --upgrade --ignore-installed entrypoints
-RUN pip3 install --no-cache-dir \
+#RUN pip3 install --upgrade --ignore-installed entrypoints
+RUN pip3 install \
         loguru pysnooper \
         numpy scipy pandas 'pyarrow>=0.14.0' \
         scikit-learn lightgbm graphviz \
@@ -19,7 +20,8 @@ RUN pip3 install --no-cache-dir \
         tabulate \
         'JPype1>=0.7.0' sqlparse \
         requests[socks] lxml notifiers \
-        git+https://github.com/dclong/dsutil@main
+        git+https://github.com/dclong/dsutil@main \
+    && pip3 cache purge
 
 COPY scripts/ /scripts/
 # proxychains configuration
