@@ -7,9 +7,7 @@ RUN apt-get update -y \
         cron wamerican \
         proxychains wget git-lfs \
         highlight \
-    && apt-get autoremove -y \
-    && apt-get clean -y \
-    && rm -rf /tmp/* /var/lib/apt/lists/* /var/tmp/*
+    && /scripts/sys/purge_cache.sh
 
 #RUN pip3 install --upgrade --ignore-installed entrypoints
 RUN pip3 install \
@@ -21,7 +19,7 @@ RUN pip3 install \
         'JPype1>=0.7.0' sqlparse \
         requests[socks] lxml notifiers \
         git+https://github.com/dclong/dsutil@main \
-    && pip3 cache purge
+    && /scripts/sys/purge_cache.sh
 
 COPY scripts/ /scripts/
 # proxychains configuration
