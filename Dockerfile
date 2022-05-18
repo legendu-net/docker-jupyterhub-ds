@@ -1,6 +1,6 @@
 # NAME: dclong/jupyterhub-ds
 FROM dclong/jupyterhub-more
-# GIT: https://github.com/dclong/docker-jupyterhub-more.git
+# GIT: https://github.com/legendu-net/docker-jupyterhub-more.git
 
 RUN apt-get update -y \
     && apt-get install -y --no-install-recommends \
