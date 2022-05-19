@@ -18,7 +18,7 @@ RUN pip3 install \
         tabulate \
         'JPype1>=0.7.0' sqlparse \
         requests[socks] lxml notifiers \
-        git+https://github.com/dclong/dsutil@main \
+        aiutil \
     && /scripts/sys/purge_cache.sh
 
 COPY scripts/ /scripts/
