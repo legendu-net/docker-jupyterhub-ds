@@ -22,6 +22,7 @@ and mounts the current working directory and `/home` on the host machine
 to `/workdir` and `/home_host` in the container respectively.
 ```
 docker run -d --init \
+    --privileged \
     --cap-add SYS_ADMIN \
     --platform linux/amd64 \
     --hostname jupyterhub-ds \
@@ -40,6 +41,7 @@ docker run -d --init \
 Use the image with the `next` tag (which is the testing/next version of dclong/jupyterhub-ds).
 ```
 docker run -d --init \
+    --privileged \
     --cap-add SYS_ADMIN \
     --platform linux/amd64 \
     --hostname jupyterhub-ds \
@@ -59,6 +61,7 @@ The following command (*only works on Linux*) does the same as the above one
 except that it limits the use of CPU and memory.
 ```
 docker run -d --init \
+    --privileged \
     --cap-add SYS_ADMIN \
     --platform linux/amd64 \
     --hostname jupyterhub-ds \
@@ -79,6 +82,7 @@ docker run -d --init \
 Use the image with the `next` tag (which is the testing/next version of dclong/jupyterhub-ds).
 ```
 docker run -d --init \
+    --privileged \
     --cap-add SYS_ADMIN \
     --platform linux/amd64 \
     --hostname jupyterhub-ds \
@@ -101,6 +105,7 @@ docker run -d --init \
 You can still launch a JupyterLab service using this Docker image. 
 ```
 docker run -d --init \
+    --privileged \
     --cap-add SYS_ADMIN \
     --platform linux/amd64 \
     --hostname jupyterlab \
