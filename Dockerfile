@@ -21,7 +21,7 @@ RUN pip3 install \
         aiutil \
     && /scripts/sys/purge_cache.sh
 
-COPY scripts/ /scripts/
+#COPY scripts/ /scripts/
 # proxychains configuration
 COPY settings/proxychains.conf /etc/proxychains.conf
 
