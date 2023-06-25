@@ -12,7 +12,7 @@ RUN apt-get update -y \
 #RUN pip3 install --upgrade --ignore-installed entrypoints
 RUN pip3 install \
         loguru pysnooper \
-        numpy scipy pandas 'pyarrow>=0.14.0' \
+        numpy scipy polars pandas 'pyarrow>=0.14.0' \
         scikit-learn lightgbm graphviz \
         matplotlib bokeh holoviews[recommended] hvplot pyviz_comms \
         tabulate \
