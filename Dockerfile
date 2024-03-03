@@ -10,7 +10,7 @@ RUN apt-get update -y \
     && /scripts/sys/purge_cache.sh
 
 #RUN pip3 install --upgrade --ignore-installed entrypoints
-RUN pip3 install \
+RUN pip3 install --break-system-packages \
         loguru pysnooper \
         numpy scipy polars pandas 'pyarrow>=0.14.0' \
         scikit-learn lightgbm graphviz \
@@ -18,7 +18,7 @@ RUN pip3 install \
         tabulate \
         'JPype1>=0.7.0' sqlparse \
         requests[socks] lxml notifiers \
-        aiutil \
+        aiutil[jupyter] \
     && /scripts/sys/purge_cache.sh
 
 #COPY scripts/ /scripts/
