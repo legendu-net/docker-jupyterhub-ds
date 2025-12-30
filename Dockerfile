@@ -2,8 +2,8 @@
 FROM dclong/jupyterhub-more
 # GIT: https://github.com/legendu-net/docker-jupyterhub-more.git
 
-RUN apt-get update -y \
-    && apt-get install -y --no-install-recommends \
+RUN apt-get -y update \
+    && apt-get -y install --no-install-recommends \
         cron wamerican \
         proxychains wget git-lfs \
         highlight \
