@@ -18,7 +18,7 @@ RUN pip3 install --break-system-packages \
         tabulate \
         'JPype1>=0.7.0' sqlparse \
         requests[socks] lxml notifiers \
-        aiutil[jupyter] \
+        aiutil[jupyter] github_rest_api \
     && /scripts/sys/purge_cache.sh
 
 #COPY scripts/ /scripts/
