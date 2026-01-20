@@ -9,8 +9,7 @@ RUN apt-get -y update \
         highlight \
     && /scripts/sys/purge_cache.sh
 
-#RUN pip3 install --upgrade --ignore-installed entrypoints
-RUN pip3 install --break-system-packages \
+RUN pip3 install \
         loguru pysnooper \
         numpy scipy polars pandas 'pyarrow>=0.14.0' \
         scikit-learn lightgbm graphviz \
